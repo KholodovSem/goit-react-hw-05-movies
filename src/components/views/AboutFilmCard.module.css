@@ -1,0 +1,55 @@
+.filmCard {
+  display: flex;
+
+  padding: 20px 30px 20px 30px;
+}
+
+.additionalInfo {
+  padding: 20px 30px 20px 30px;
+}
+
+.poster {
+  margin-right: 15px;
+}
+
+.genresList {
+  display: flex;
+}
+
+.largeText {
+  font-weight: 700;
+}
+
+.largeText:first-child{
+  margin-right: 10px;
+}
+
+.largeText:last-child{
+  margin-bottom: 0px;
+}
+
+.genre:not(:last-child) {
+  margin-right: 10px;
+}
+
+.link {
+  display: inline-flex;
+
+  font-size: 20px;
+  color: black;
+}
+
+.link:first-child {
+  margin-bottom: 10px;
+}
+
+.activeLink {
+  composes: link;
+
+  color: blue;
+  border-bottom: 2px solid blue;
+}
+
+.activeLink:first-child {
+  margin-bottom: 10px;
+}

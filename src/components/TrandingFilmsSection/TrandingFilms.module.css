@@ -1,0 +1,36 @@
+.trendingFilmsSection {
+  padding: 20px 10px 20px 10px;
+}
+
+.filmList {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  gap: 30px 30px;
+  grid-template-areas:
+    ". . . ."
+    ". . . ."
+    ". . . ."
+    ". . . .";
+}
+
+.filmTitle {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 10px;
+
+  font-size: 24px;
+  color: black;
+
+  transition: color 200ms linear 0ms;
+}
+
+.filmTitle:hover{
+  color: coral;
+}
+
+.poster {
+  margin-left: auto;
+  margin-right: auto;
+}

@@ -1,0 +1,12 @@
+.searchForm {
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+
+}
+
+.searchInput {
+  padding: 3px;
+
+  margin-bottom: 20px;
+}
