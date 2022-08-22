@@ -11,6 +11,7 @@ function MoviesByNameGallery({ require }) {
       return;
     }
 
+    sessionStorage.setItem('require', require);
     getFilmsByName(require).then(({ data }) => setFilms(data.results));
 
   }, [require]);

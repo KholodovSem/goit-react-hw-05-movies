@@ -4,7 +4,7 @@ import Form from './Form';
 import MoviesByNameGallery from './MoviesByNameGallery';
 
 function MoviesSection() {
-  const [searchRequire, setSearchRequire] = useState('');
+  const [searchRequire, setSearchRequire] = useState(sessionStorage.getItem("require"));
 
 
   const handleSubmit = (require) => {

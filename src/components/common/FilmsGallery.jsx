@@ -24,8 +24,8 @@ function FilmsGallery ({ films, homePath=false }) {
 }
 
 FilmsGallery.propTypes = {
-  films: PropTypes.arrayOf(PropTypes.object).isRequired,
-  homePath: PropTypes.bool.isRequired
+  films: PropTypes.arrayOf(PropTypes.object),
+  homePath: PropTypes.bool
 }
 
 export default FilmsGallery;
