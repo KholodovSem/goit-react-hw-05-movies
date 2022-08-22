@@ -14,7 +14,7 @@ function AboutFilmCard() {
 
   useEffect(() => {
     getFilmById(filmById).then(({ data }) => setFilm(data));
-  }, []);
+  }, [filmById]);
 
   return (
     <>

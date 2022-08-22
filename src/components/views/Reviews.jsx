@@ -10,7 +10,7 @@ function Reviews() {
 
   useEffect(() => {
     getReviews(filmId).then(({data}) => setReviews(data.results));
-  }, []);
+  }, [filmId]);
 
   return (
     <ul className={style.reviewList}>

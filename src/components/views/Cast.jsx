@@ -12,7 +12,7 @@ function Cast () {
 
   useEffect(() => {
     getCredits(filmId).then(({ data }) => setCasts(data.cast));
-  }, []);
+  }, [filmId]);
 
   return (
     <ul className={style.reviewList}>
