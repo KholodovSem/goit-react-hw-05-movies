@@ -19,7 +19,7 @@ function Cast () {
       {casts && casts.map((cast) => {
         return (
           <li key={cast.id}>
-            <img src={IMAGE_PATH + cast.profile_path}/>
+            <img src={IMAGE_PATH + cast.profile_path} alt="actor"/>
             <p style={{fontWeight: 700}}>Actor Name:  {cast.name}</p>
             <p>Character: {cast.character}</p>
           </li>

@@ -19,7 +19,7 @@ function AboutFilmCard() {
   return (
     <>
       {film && <div className={style.filmCard}>
-        <img src={IMAGE_PATH + film.poster_path} className={style.poster} />
+        <img src={IMAGE_PATH + film.poster_path} className={style.poster} alt='Film Poster'/>
         <ul>
           <li>
             <h2>{film.original_title}</h2>

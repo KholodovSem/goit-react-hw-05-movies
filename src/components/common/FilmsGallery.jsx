@@ -1,5 +1,6 @@
 import style from '../TrandingFilmsSection/TrandingFilms.module.css';
-import { useParams, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const IMAGE_PATH = 'https://image.tmdb.org/t/p/original';
 
@@ -12,7 +13,7 @@ function FilmsGallery ({ films, homePath=false }) {
         return (
           <li key={film.id}>
             <div>
-              <img className={style.poster} src={IMAGE_PATH + film.poster_path} height='auto' />
+              <img className={style.poster} src={IMAGE_PATH + film.poster_path} height='auto' alt="Film poster"/>
               <Link to={homePath? `/movies/${film.id}` :`${film.id}`} className={style.filmTitle}>{film.original_title || film.original_name}</Link>
             </div>
           </li>
@@ -22,4 +23,10 @@ function FilmsGallery ({ films, homePath=false }) {
   )
 }
 
+FilmsGallery.propTypes = {
+  films: PropTypes.arrayOf(PropTypes.object).isRequired,
+  homePath: PropTypes.bool.isRequired
+}
+
 export default FilmsGallery;
+

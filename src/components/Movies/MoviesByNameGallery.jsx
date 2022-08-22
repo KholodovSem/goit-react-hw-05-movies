@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getFilmsByName } from '../../helpers/FetchAPI';
 import FilmsGallery from '../common/FilmsGallery';
+import PropTypes from 'prop-types';
 
 function MoviesByNameGallery({ require }) {
   const [films, setFilms] = useState(null);
@@ -19,4 +20,9 @@ function MoviesByNameGallery({ require }) {
   );
 }
 
+MoviesByNameGallery.propTypes = {
+  require: PropTypes.string.isRequired
+}
+
 export default MoviesByNameGallery;
+
