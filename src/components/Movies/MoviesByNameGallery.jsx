@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { getFilmsByName } from '../../helpers/FetchAPI';
 import FilmsGallery from '../common/FilmsGallery';
 import PropTypes from 'prop-types';
@@ -14,7 +14,7 @@ function MoviesByNameGallery({ require }) {
     }
 
     getFilmsByName(searchParams.get("filmName")).then(({ data }) => setFilms(data.results));
-  }, [])
+  }, [searchParams])
 
   useEffect(() => {
     if (require === '') {
@@ -24,7 +24,7 @@ function MoviesByNameGallery({ require }) {
     setSearchParams({ filmName: require })
     getFilmsByName(require).then(({ data }) => setFilms(data.results));
 
-  }, [require]);
+  }, [require, setSearchParams]);
 
 
   return (
