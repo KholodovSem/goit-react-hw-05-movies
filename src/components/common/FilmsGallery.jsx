@@ -24,7 +24,9 @@ function FilmsGallery ({ films, homePath=false }) {
 }
 
 FilmsGallery.propTypes = {
-  films: PropTypes.arrayOf(PropTypes.object),
+  films: PropTypes.oneOfType([
+    PropTypes.string,
+    PropTypes.array,]) ,
   homePath: PropTypes.bool
 }
 

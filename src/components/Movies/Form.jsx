@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 
 
 function SearchForm ({onSubmit}) {
-  const [searchRequire, setSearchRequire] = useState(sessionStorage.getItem('require'));
+  const [searchRequire, setSearchRequire] = useState('');
 
   const handleChange = (e) => {
     const value = e.currentTarget.value;
